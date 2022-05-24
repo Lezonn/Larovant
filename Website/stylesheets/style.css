@@ -1,0 +1,435 @@
+@font-face {
+    font-family: copperplate;
+    src: url(../fonts/CopperplateGothicBold.ttf);
+}
+
+@font-face {
+    font-family: Valorant;
+    src: url(../fonts/Valorant.ttf);
+}
+
+@font-face {
+    font-family: Constantia;
+    src: url(../fonts/Constantia.ttf);
+}
+
+@font-face {
+    font-family: DIN;
+    src: url(../fonts/DIN.otf);
+}
+
+@font-face {
+    font-family: OldStandart;
+    src: url(../fonts/OldStandardTT-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Regular.ttf);
+}
+
+@font-face {
+    font-family: Sanchez;
+    src: url(../fonts/Sanchezregular.otf);
+}
+
+@font-face {
+    font-family: BarlowCondensed;
+    src: url(../fonts/BarlowCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: LibreFranklin;
+    src: url(../fonts/LibreFranklin-Bold.otf);
+}
+
+* {
+    font-family: copperplate;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: copperplate;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+
+nav {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    background-color: #232323;
+    padding: 0 3%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    height: 64px;
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.menu {
+    display: flex;
+    font-size: 0.8rem;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.3s;
+    width: 550px;
+}
+
+.menu .nav-menu-wrapper {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    margin-left: 20px;
+}
+
+/* Logo */
+
+.logo img {
+    width: 60px;
+}
+
+/* Navbar menu */
+
+.nav-menu {
+    align-items: center;
+    display: flex;
+    height: inherit;
+    position: relative;
+}
+
+.nav-menu-text {
+    font-family: Sanchez;
+    font-size: 0.9rem;
+}
+
+.game-info {
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+}
+
+.specs {
+    cursor: pointer;
+    width: 60px;
+}
+
+.social-media {
+    cursor: pointer;
+    position: relative;
+    width: 120px;
+}
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    margin-left: 7px;
+}
+
+/* Dropdown list */
+
+.ddl {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgba(35, 35, 35, 80%);
+    display: flex;
+    height: fit-content !important;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    visibility: hidden;
+}
+
+.ddl-item {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 5px 0;
+    width: 105px;
+}
+
+.ddl-item, .ddl-item > * {
+    font-family: Sanchez !important;
+    font-size: 0.9rem !important;
+}
+
+/* game info drowdown list */
+
+.game-info .arrow-game-info {
+    transition: all 0.3s;
+}
+
+
+
+/* social media drowdown list */
+
+.social-media .arrow-social-media {
+    transition: all 0.3s;
+}
+
+
+/* Nav Title */
+.nav-title {
+    color: #fff;
+    display: none;
+    font-family: Valorant;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
+}
+
+/* Burger menu */
+
+.burger-menu-wrapper {
+    display: none;
+    justify-content: center;
+    width: 60px;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+    width: fit-content;
+    z-index: 99;
+}
+
+.burger-menu span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.burger-menu input {
+    display: block;
+    position: absolute;
+    background-color: black;
+    width: 28px;
+    height: 28px;
+    left: -5px;
+    top: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+.burger-menu-active {
+    transform: translateX(0) !important;
+    transition: all 0.3s;
+}
+
+.burger-menu span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.burger-menu span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.burger-menu input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.burger-menu input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.burger-menu input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* footer */
+
+footer {
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.social-icon img {
+    width: 45px;
+    margin: 0 15px;
+}
+
+.footer-description {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    text-align: center;
+    width: 25%;
+}
+
+.icon {
+    filter: brightness(75%);
+    transition: all 0.3s;
+}
+
+.icon:hover {
+    filter: brightness(100%);
+}
+
+/* Responsive */
+
+@media (min-width: 800px) {
+
+    .ddl-item:hover {
+        background-color: #fff;
+        color: black;
+    }
+
+    .ddl-game-info .ddl-item {
+        display: flex;
+        justify-content: center;
+        margin: 0 !important;
+        padding: 5px 0;
+        width: 100px;
+    }
+
+    .game-info:hover .arrow-game-info {
+        transform: rotate(45deg);
+    }
+    
+    .game-info:hover .ddl-game-info {
+        transition: all 0.4s;
+        visibility: visible;
+        top: 50px;
+    }
+
+    .social-media:hover .arrow-social-media {
+        transform: rotate(45deg);
+    }
+    
+    .social-media:hover .ddl-social-media {
+        transition: all 0.4s;
+        visibility: visible;
+        top: 50px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .burger-menu-wrapper {
+        display: flex;
+    }
+
+    .menu {
+        background-color: #232323;
+        display: block;
+        flex-direction: column;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 64px;
+        transform: translateX(100%);
+        width: 200px;
+        height: 100vh;
+    }
+
+    .nav-menu-wrapper {
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+        justify-content: center;
+        margin: 0 !important;
+        width: inherit;
+    }
+
+    .nav-menu {
+        display: flex;
+        padding-left: 20px;
+        width: 200px;
+    }
+
+    .nav-menu-text-wrapper {
+        width: 200px;
+    }
+
+    .nav-menu-text {
+        font-size: 1rem;
+        font-family: OldStandart;
+    }
+
+    .nav-title {
+        display: block;
+        margin-top: 6px;
+    }
+
+    .ddl {
+        background-color: rgba(35, 35, 35);
+        display: flex;
+        top: 0;
+        width: 100%;
+        visibility: hidden;
+        border: none;
+    }
+
+    .ddl-item {
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        width: inherit;
+        position: relative;
+        left: 0;
+    }
+
+    .ddl-active {
+        visibility: visible;
+        transform: translateY(50%);
+        transition: all 0.3s;
+        z-index: 101;
+    }
+
+    .ddl-active-2 {
+        visibility: visible;
+        transform: translateY(20%);
+        transition: all 0.3s;
+        z-index: 101;
+    }
+
+    .arrow-active {
+        transform: rotate(45deg);
+    }
+
+    .footer-description {
+        width: 60%;
+    }
+}

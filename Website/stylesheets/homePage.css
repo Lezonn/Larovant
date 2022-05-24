@@ -1,0 +1,240 @@
+h2 {
+    margin: 25px 0;
+    font-size: 3rem;
+}
+
+header {
+    align-items: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 250px 0;
+    position: relative;
+    width: 100%;
+}
+
+video {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+header .header-item {
+    margin: 20px 0;
+}
+
+.header-text {
+    color: #fff;
+    font-family: Valorant;
+    font-size: calc(4vw + 3rem);
+    font-weight: 200;
+    margin: auto;
+    transform: translateY(50%);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.register-btn {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 0 0 #fff;
+    color: #fff;
+    font-size: calc(0.3vw + 0.8rem);
+    margin-top: 3%;
+    padding: calc(0.3vw + 0.8rem);
+    width: fit-content;
+    transition: 0.5s;
+}
+
+.register-btn:hover {
+    box-shadow: inset 300px 0 0 0 #fff;
+    color: black;
+}
+
+.section-title {
+    transform: translateY(50%);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.about-us {
+    align-items: flex-end;
+    background: url(../images/homePage/about-us.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 260px 0;
+    position: relative;
+    width: 100%;
+}
+
+.about-us-content {
+    color: #fff;
+    font-family: Constantia !important;
+    padding: 0 6%;
+    width: 35%;
+}
+
+.about-us-description {
+    font-family: Constantia;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.agents {
+    align-items: center;
+    background: url(../images/homePage/agents.jpg);
+    background-size: cover;
+    display: flex;
+    padding: 15% 0;
+    position: relative;
+    width: 100%;
+}
+
+.agents-content {
+    color: #fff;
+    font-family: Constantia !important;
+    padding: 0 6%;
+    position: relative;
+    width: 35%;
+}
+
+.agents-description {
+    font-family: Constantia;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.agents-btn {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 0 0 #fff;
+    color: #fff;
+    font-size: calc(0.3vw + 0.8rem);
+    margin-top: 3%;
+    padding: calc(0.3vw + 0.8rem);
+    width: max-content;
+    transition: 0.5s;
+}
+
+.agents-btn:hover {
+    box-shadow: inset 300px 0 0 0 #fff;
+    color: black;
+}
+
+.agents-img img {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    width: calc(20% + 100px);
+}
+
+.skye {
+    position: relative;
+}
+
+.yoru {
+    right: 15% !important;
+}
+
+.maps {
+    align-items: center;
+    background: url(../images/homePage/maps.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 15% 0;
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+
+.maps-content {
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    font-family: Constantia !important;
+    flex-direction: column;
+    padding: 0 6%;
+    width: 35%;
+    position: relative;
+}
+
+.maps-description {
+    font-family: Constantia;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.maps-btn {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: inset 0 0 0 0 #fff;
+    color: #fff;
+    font-size: calc(0.3vw + 0.8rem);
+    margin-top: 3%;
+    padding: calc(0.3vw + 0.8rem);
+    width: max-content;
+    transition: 0.5s;
+}
+
+.maps-btn:hover {
+    box-shadow: inset 250px 0 0 0 #fff;
+    color: black;
+}
+
+@media (max-width: 800px) {
+
+    .about-us {
+        align-items: center;
+    }
+
+    .about-us-content {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .agents {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .agents-content {
+        box-sizing: border-box;
+        text-align: center;
+        width: 90%;
+    }
+
+    .agents-img img {
+        display: none;
+    }
+
+    .agents-btn {
+        margin: 20px auto;
+    }
+
+    .maps {
+        align-items: center;
+    }
+
+    .maps-content {
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        width: 90%;
+    }
+    
+}
